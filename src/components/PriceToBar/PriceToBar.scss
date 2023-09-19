@@ -1,0 +1,19 @@
+.top_bar{
+  background:#c03435;
+}
+.coin_icon_eth{
+  height:20px;
+}
+
+.coin_icon_bnb{
+  width:15px;
+  margin: -4px 3px 0;
+}
+@media screen and (max-width: 580px){
+  .top_bar{
+    background:#c03435;
+    width:100%;
+    position: absolute;
+    z-index: 999;
+  }
+}

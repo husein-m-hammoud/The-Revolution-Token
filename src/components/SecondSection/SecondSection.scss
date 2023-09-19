@@ -1,0 +1,23 @@
+.second-section--title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.second-section--text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #FFFFFFE5;
+}
+.coming_soon{
+  width:400px;
+}
+
+@media screen and (max-width: 580px) {
+.coming_soon{
+  width:250px;
+}
+}

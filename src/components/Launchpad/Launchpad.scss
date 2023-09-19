@@ -1,0 +1,23 @@
+.coming-soon {
+  margin-top: -100px
+}
+@media screen and (min-width: 580px) {
+.gif_loading {
+  margin-top:50px;
+  height:100vh;
+  max-width: 100vw;
+}
+.sec_gif_loading {
+  height:100vh;
+}
+}
+@media screen and (max-width: 580px) {
+.gif_loading {
+  margin-top:50px;
+  height:100% !important;
+  max-width: 100vw;
+}
+.sec_gif_loading {
+  height:100% !important;
+}
+}

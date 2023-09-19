@@ -1,0 +1,14 @@
+@import '~video-react/styles/scss/video-react';
+.video-react-video{
+  border: 1px solid;
+}
+.video-react-poster, .video-react-progress-control.video-react-control{
+  display:none !important;
+
+}
+
+@media(max-width:576px){
+.video-react{
+  height:225px !important;
+}
+}

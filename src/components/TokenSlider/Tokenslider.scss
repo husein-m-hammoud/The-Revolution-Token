@@ -1,0 +1,74 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.silder_card {
+  width:300px;
+  height:370px;
+  background:#fff;
+  padding:40px 20px;
+  color:#FFF;
+  border-radius:15px;
+}
+
+.slider_center {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.slide img{
+width:150px;
+margin: 0 auto;
+margin-bottom:20px;
+
+}
+
+.slide{
+  width:300px !important;
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.activeSlide{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow{
+  position: absolute;
+cursor: pointer;
+z-index: 10;
+}
+
+.arrow svg{
+  transition: color 300ms;
+  font-size:35px;
+}
+
+.arrow svg:hover {
+  color: #FFF;
+}
+
+.next {
+  right: 0%;
+  top: 50%;
+}
+
+.prev {
+  left: 0%;
+  top: 50%;
+}
+.token_address svg {
+  color:#000 ;
+}
+.token_address button {
+  border: 1px solid #000 !important;
+}
+
+
+.token_address .address {
+  color:#000 ;
+  font-size:13px;
+
+}

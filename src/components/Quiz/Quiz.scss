@@ -1,0 +1,85 @@
+  .show_next--animation {
+    animation: show_next_translation 0.1s;
+  }
+   @keyframes show_next_translation {
+    from {
+      transform: translate(100%, 0px);
+    }
+    to {
+      transform: translate(0%, 0px);
+    }
+  }
+
+
+
+.react-code-input {
+  input {
+    width:50px !important;
+    height:50px !important;
+  }
+}
+
+button.submit {
+  background: #fff0;
+    color: #ffff;
+}
+.resend {
+  cursor:pointer;
+}
+.subtitle{
+    font-size: 20px;
+
+}
+.title {
+  text-transform: uppercase;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+button.submit:disabled {
+  cursor: not-allowed;
+    opacity: 33%;
+}
+@media(max-width:576px){
+.react-code-input {
+  input {
+    width:40px !important;
+    height:40px !important;
+  }
+}
+}
+
+
+
+.grade {
+
+  .title-grade{
+    font-size: 50px;
+    font-family: fantasy !important;
+  }
+  .title-grade.green{
+    color:green;
+  }
+
+  .title-grade.red{
+    color:red;
+  }
+  .sub-title {
+    margin-top:20px;
+    font-size:30px;
+  }
+  .connect_us {
+    margin-top:60px;
+  }
+  .connect_us a {
+    color:#fff;
+  }
+}
+.go_back{
+  margin-top: 30px;
+  cursor:pointer;
+    font-size: 34px;
+}

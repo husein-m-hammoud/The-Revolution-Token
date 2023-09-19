@@ -1,0 +1,48 @@
+.particle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0vh;
+  height: 100vh;
+  z-index: -1;
+  background: rgba(#000000, 1);
+  position: fixed;
+
+  &_items {
+    position: relative;
+  }
+
+  &_item {
+    width: 4px;
+    height: 4px;
+    position: absolute;
+
+    &::before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(#ffffff, 1);
+      content: '';
+    }
+
+    @for $i from 0 through 3000 {
+      $rotate: $i * 6;
+      $timing: random(100) / 25;
+
+      &_#{$i} {
+        transform: scale(random(5)) rotate(#{$rotate}deg);
+
+        &::before {
+          animation: particle 5s ease-in #{$timing}s infinite both running;
+        }
+      }
+    }
+  }
+}
+
+@keyframes particle {
+  0% { opacity: .25; transform: scale(0) translateX(0); }
+  100% { opacity: 1; transform: scale(1) translateX(100vw); }
+}

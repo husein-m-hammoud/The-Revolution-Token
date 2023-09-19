@@ -1,0 +1,28 @@
+.top-section {
+  height: 278px;
+}
+
+.top-section--title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  padding-top: 84px;
+  padding-bottom: 22px;
+
+}
+
+.top-section--text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #000;
+  padding-bottom: 83px;
+}
+
+@media screen and (max-width: 580px) {
+  .top-section {
+    height: unset;
+  }
+}

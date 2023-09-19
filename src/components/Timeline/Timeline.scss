@@ -1,0 +1,110 @@
+//Colors
+$black: #34435E;
+$white: #ffffff;
+
+
+main {
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.time_line p ul {
+  //list-style: none;
+  padding-left:0px;
+}
+
+.time_line p:nth-child(even) {
+  //padding-left:0px !important;
+
+}
+.time_line p .phase-title{
+  font-size:1.2rem;
+  font-weight: 700;
+}
+
+.time_line p  {
+  list-style: none;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+ // border-image: linear-gradient(to right, #0000ff, #0000ff,#0000ff,#ff0000, #ff0000,  #ff0000);
+  border-image: linear-gradient(to right, #8104c3, #bb277b, #452ffa, #2770fc, #0000ff,  #8104c3, #bb277b, #452ffa, #2770fc);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: $white;
+  animation: clippath 3s infinite linear;
+
+
+  //numbers
+  &:before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 2.25em;
+    width: 2.25em;
+    background-color: $black;
+    text-align: center;
+    line-height: 1.25em;
+    color: $white;
+    font-size: 1.25em;
+  }
+}
+//odd number borders
+.time_line p:nth-child(odd) {
+  border-right: 3px solid;
+ // padding-left: 0;
+
+  &:before {
+    left: 100%;
+    margin-left: -20px;
+  }
+}
+//even number borders
+.time_line p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+
+  &:before {
+    right: 100%;
+    margin-right: -20px;
+  }
+}
+//handle first and last
+.time_line p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+.time_line p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+
+x-sign {
+  --interval: 1s;
+  display: block;
+  text-shadow:
+    0 0 10px var(--color1);
+  will-change: filter, color;
+  filter: saturate(60%);
+  //animation: flicker steps(100) var(--interval) 1s infinite;
+}
+x-sign {
+  color: #FFF;
+  --color1: blue;
+  font-family: Sriracha;
+}
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+

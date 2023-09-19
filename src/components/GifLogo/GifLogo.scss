@@ -1,0 +1,42 @@
+.gif_logo_box {
+
+  height: 100vh;
+  width:100%;
+  margin:auto;
+  align-items: center;
+  justify-content: center;
+    display: flex;
+}
+.gif_logo_box-image {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: bummer 2s;
+    animation: bummer 2s;
+    -webkit-transform: scale(0,0);
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bummer {
+    100% {
+        -webkit-transform: scale(1,1);
+    }
+}
+
+@keyframes bummer {
+    100% {
+        transform: scale(1,1);
+    }
+}
+.container{
+}
+
+.card_move {
+  perspective: 1800px;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform: rotateX(11deg) rotateY(16.5deg);
+  min-width: 595px;
+}

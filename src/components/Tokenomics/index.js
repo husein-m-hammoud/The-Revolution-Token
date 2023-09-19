@@ -1,0 +1,1 @@
+export { default as Tokenomics } from './Tokenomics';

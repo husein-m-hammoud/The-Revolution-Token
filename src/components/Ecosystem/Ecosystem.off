@@ -1,0 +1,85 @@
+// Libraries
+import { useState } from "react";
+import cn from "classnames";
+import React from 'react';
+
+// Components
+
+// Style
+import './Ecosystem.scss';
+
+function Ecosystem() {
+
+  const cards = [
+    {
+      id: "1",
+      background: '/img/swap-new.jpg',
+      background_play: './img/swap-new-loop.gif',
+    },
+    {
+      id: "2",
+      background: '/img/launchpad-new.jpg',
+      background_play: './img/launchpad-new-loop.gif',
+    },
+    {
+      id: "3",
+      background: '/img/workspace-new.jpg',
+      background_play: './img/workspace-new-loop.gif',
+    },
+    {
+      id: "4",
+      background: '/img/revolverse-new.jpg',
+      background_play: './img/revolverse-new-loop.gif',
+    }
+  ];
+
+
+  return (
+
+     <div id="trt-ecosystem" className="container">
+        <h1 className="text-center pt-5 pb-4 trt-ecosystem--title">ECOSYSTEM</h1>
+      <div className="row h-100">
+        <div className="flip-card-grid  d-flex flex-column flex-md-row justify-content-around align-items-center">
+          {cards.map((card) => (
+              <Flip key={card.id} card={card} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Ecosystem;
+
+
+function Flip({ card }) {
+  const [showBack, setShowBack] = useState(true);
+
+  function handleClick() {
+      setShowBack(!showBack);
+
+  }
+var n = Date.now();
+  return (
+    <>
+    {showBack
+      ?
+    <div className="flip-card-outer bg_1" style={{backgroundImage: `url(${card.background})`}}
+        onClick={handleClick}
+        onMouseEnter={handleClick}
+        onMouseLeave={handleClick}
+          >
+    </div>
+      :
+    <div className="flip-card-outer bg_1 ss" style={{backgroundImage: `url(${card.background_play}?ver=${n})`}}
+        onClick={handleClick}
+        onMouseEnter={handleClick}
+        onMouseLeave={handleClick}
+          >
+    </div>
+    }
+    </>
+
+  );
+}
+
